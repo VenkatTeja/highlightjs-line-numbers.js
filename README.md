@@ -1,4 +1,4 @@
-# highlightjs-line-numbers.js [![version](http://img.shields.io/badge/release-v1.1.0-brightgreen.svg?style=flat)](https://github.com/wcoder/highlightjs-line-numbers.js/archive/master.zip)
+# highlightjs-line-numbers.js [![version](http://img.shields.io/badge/alpha-v2.0.0-brightgreen.svg?style=flat)](https://github.com/wcoder/highlightjs-line-numbers.js/archive/master.zip)
 
 Highlight.js line numbers plugin.
 
@@ -27,9 +27,12 @@ Download plugin and include file after highlight.js:
 
 Adding styles:
 ```css
-.hljs-line-numbers {
+.hljs-line-numbers b {
+	display: inline-block;
 	text-align: right;
-	border-right: 1px solid #ccc;
+	float: left;
+	margin-left: -30px;
+	width: 25px;
 	color: #999;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -37,6 +40,14 @@ Adding styles:
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+.hljs-line-numbers > div {
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+}
+pre, code {
+	white-space: pre-wrap;
+	padding-left: 20px;
 }
 ```
 
